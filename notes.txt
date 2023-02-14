@@ -1,0 +1,14 @@
+
+Tutorials read:
+    - https://www.youtube.com/watch?v=wLXIWKUWpSs
+
+Tutorials that I might read:
+    - https://www.cs.virginia.edu/~evans/cs216/guides/x86.html#registers
+    - https://github.com/mschwartz/assembly-tutorial
+    - https://cs.lmu.edu/~ray/notes/x86assembly/
+    - https://cs.lmu.edu/~ray/notes/nasmtutorial/
+
+Notes:
+    * How to do modulo in assembly
+        - https://stackoverflow.com/a/8022107/5832619
+

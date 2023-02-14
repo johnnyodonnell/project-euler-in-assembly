@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+# https://stackoverflow.com/a/965072/5832619
+PROBLEM=${1%%.*}
+
+nasm -f elf32 "$PROBLEM.asm"
+
+ld -m elf_i386 "$PROBLEM.o"
+
+./a.out
+
+echo $?
+
+rm "$PROBLEM.o"
+
