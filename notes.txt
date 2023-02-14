@@ -3,7 +3,11 @@ Tutorials read:
     - https://www.youtube.com/watch?v=wLXIWKUWpSs
 
 Tutorials that I might read:
-    - https://www.cs.virginia.edu/~evans/cs216/guides/x86.html#registers
+    - https://www.intel.com/content/dam/develop/external/us/en/documents/introduction-to-x64-assembly-181178.pdf
+    - https://web.stanford.edu/class/cs107/guide/x86-64.html
+    - https://gpfault.net/posts/asm-tut-0.txt.html
+    - https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
+    - https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
     - https://github.com/mschwartz/assembly-tutorial
     - https://cs.lmu.edu/~ray/notes/x86assembly/
     - https://cs.lmu.edu/~ray/notes/nasmtutorial/
@@ -11,4 +15,6 @@ Tutorials that I might read:
 Notes:
     * How to do modulo in assembly
         - https://stackoverflow.com/a/8022107/5832619
+    * Compiling x64 assembly with libc
+        - https://montcs.bloomu.edu/~bobmon/Code/Asm.and.C/Asm.Nasm/hello-printf-64.asm.html
 

@@ -4,13 +4,12 @@
 # https://stackoverflow.com/a/965072/5832619
 PROBLEM=${1%%.*}
 
-nasm -f elf32 "$PROBLEM.asm"
+nasm -f elf64 "$PROBLEM.asm"
 
-ld -m elf_i386 "$PROBLEM.o"
+# https://stackoverflow.com/a/73468271/5832619
+gcc -z noexecstack "$PROBLEM.o"
 
 ./a.out
-
-echo $?
 
 rm "$PROBLEM.o"
 
