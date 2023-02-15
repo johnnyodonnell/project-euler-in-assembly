@@ -8,6 +8,21 @@ SECTION .text
 extern printf
 global main
 
+modulo:
+    push RBP
+    mov RBP, RSP
+
+    mov RAX, [RBP + 16] ; left operand
+    mov RCX, [RBP + 24] ; right operand
+    mov RDX, 0x0
+    div RCX
+
+    mov RAX, RDX
+
+    leave
+    ret
+
+
 main:
     mov RBP, RSP
     push 0x0 ; iterator
@@ -15,24 +30,24 @@ main:
 
 modulo_3:
     ; Modulo: https://stackoverflow.com/a/8232170/5832619
-    mov RAX, [RBP - 8]
-    mov RCX, 0x3
-    mov RDX, 0x0
-    div RCX
+    push 0x3
+    push qword [RBP - 8]
+    call modulo
+    add RSP, 16 ; pop
 
-    cmp RDX, 0x0
+    cmp RAX, 0x0
     jne modulo_5
     mov RAX, [RBP - 8]
     add [RBP - 16], RAX
     jmp loop_end
 
 modulo_5:
-    mov RAX, [RBP - 8]
-    mov RCX, 0x5
-    mov RDX, 0x0
-    div RCX
+    push 0x5
+    push qword [RBP - 8]
+    call modulo
+    add RSP, 16 ; pop
 
-    cmp RDX, 0x0
+    cmp RAX, 0x0
     jne loop_end
     mov RAX, [RBP - 8]
     add [RBP - 16], RAX
