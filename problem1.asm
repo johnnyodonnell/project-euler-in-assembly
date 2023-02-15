@@ -5,8 +5,8 @@ fmt: db "%d", 0x0a, 0
 
 SECTION .text
 
-global main
 extern printf
+global main
 
 main:
     mov RBP, RSP
@@ -49,7 +49,14 @@ loop_end:
     ; return result
     ; https://montcs.bloomu.edu/~bobmon/Code/Asm.and.C/Asm.Nasm/hello-printf-64.asm.html
     mov RSI, [RBP - 16]
-    mov RDI, fmt
+
+    ; A comment in this SO question:
+    ; https://stackoverflow.com/q/34288482/5832619
+    ; led me to use "lea RDI, [rel fmt]" instead of
+    ; "mov RDI, fmt" in order to make this program
+    ; position independent
+    lea RDI, [rel fmt]
+
     mov RAX, 0x0
     ; https://stackoverflow.com/a/52131094/5832619
     call printf wrt ..plt
