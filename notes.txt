@@ -1,10 +1,13 @@
 
 Tutorials read:
     - https://www.youtube.com/watch?v=wLXIWKUWpSs
+    - https://web.stanford.edu/class/cs107/guide/x86-64.html
+        * Contains a list of the registers conventionally owned by
+            the caller and registers conventionally owned by the callee
+        * Explains the use instructions such as `mov %ebx, %ebx`
 
 Tutorials that I might read:
     - https://www.intel.com/content/dam/develop/external/us/en/documents/introduction-to-x64-assembly-181178.pdf
-    - https://web.stanford.edu/class/cs107/guide/x86-64.html
     - https://gpfault.net/posts/asm-tut-0.txt.html
     - https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
     - https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
