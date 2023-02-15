@@ -26,11 +26,11 @@ Tutorials read:
                 - Must be saved and restored
 
 Tutorials that I might read:
+    - https://cs.lmu.edu/~ray/notes/nasmtutorial/
     - https://gpfault.net/posts/asm-tut-0.txt.html
     - https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
     - https://github.com/mschwartz/assembly-tutorial
     - https://cs.lmu.edu/~ray/notes/x86assembly/
-    - https://cs.lmu.edu/~ray/notes/nasmtutorial/
 
 Notes:
     * How to do modulo in assembly
