@@ -53,12 +53,10 @@ modulo_5:
     add [RBP - 16], RAX
 
 loop_end:
-    mov RAX, [RBP - 8]
-    inc RAX
-    mov [RBP - 8], RAX
+    inc qword [RBP - 8]
 
     ; https://www.aldeid.com/wiki/X86-assembly/Instructions/jl
-    cmp RAX, 0x3e8
+    cmp qword [RBP - 8], 0x3e8
     jl modulo_3
 
     ; return result
