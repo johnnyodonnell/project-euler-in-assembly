@@ -1,6 +1,7 @@
 
 Tutorials read:
     - https://www.youtube.com/watch?v=wLXIWKUWpSs
+    - https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
     - https://web.stanford.edu/class/cs107/guide/x86-64.html
         * Contains a list of the registers conventionally owned by
             the caller and registers conventionally owned by the callee
@@ -31,7 +32,6 @@ Tutorials that I might read:
             before making a call."
         * Started reading, but did not finish
     - https://gpfault.net/posts/asm-tut-0.txt.html
-    - https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
     - https://github.com/mschwartz/assembly-tutorial
     - https://cs.lmu.edu/~ray/notes/x86assembly/
 
