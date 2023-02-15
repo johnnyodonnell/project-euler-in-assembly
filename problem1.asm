@@ -10,7 +10,7 @@ global main
 
 main:
     mov RBP, RSP
-    push 0x3 ; iterator
+    push 0x0 ; iterator
     push 0x0 ; sum
 
 modulo_3:
