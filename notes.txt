@@ -5,12 +5,6 @@ Tutorials read:
         * Contains a list of the registers conventionally owned by
             the caller and registers conventionally owned by the callee
         * Explains the use instructions such as `mov %ebx, %ebx`
-    - https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
-        * Not a great tutorial, since there are some typos in the doc
-        * Mentions that the base pointer has mostly been eliminated
-            in 64-bit architecture
-        * By convention, function arguments are pushed onto the stack
-            in right-to-left order
     - https://www.intel.com/content/dam/develop/external/us/en/documents/introduction-to-x64-assembly-181178.pdf
         * "assembly code knowledge is indispensable when diagnosing malware"
         * An extended precision data type is supported, which is an
@@ -24,9 +18,18 @@ Tutorials read:
         * "RBX, RBP, RDI, RSI, R12, R14, R14, and R15 must be saved in
             any function using them"
                 - Must be saved and restored
+    - https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
+        * Not a great tutorial, since there are some typos in the doc
+        * Mentions that the base pointer has mostly been eliminated
+            in 64-bit architecture
+        * By convention, function arguments are pushed onto the stack
+            in right-to-left order
 
 Tutorials that I might read:
     - https://cs.lmu.edu/~ray/notes/nasmtutorial/
+        * "The stack pointer rsp must be aligned to a 16-byte boundary
+            before making a call."
+        * Started reading, but did not finish
     - https://gpfault.net/posts/asm-tut-0.txt.html
     - https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
     - https://github.com/mschwartz/assembly-tutorial
