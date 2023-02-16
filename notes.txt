@@ -31,9 +31,7 @@ Tutorials that I might read:
         * "The stack pointer rsp must be aligned to a 16-byte boundary
             before making a call."
         * Started reading, but did not finish
-    - https://gpfault.net/posts/asm-tut-0.txt.html
     - https://github.com/mschwartz/assembly-tutorial
-    - https://cs.lmu.edu/~ray/notes/x86assembly/
 
 Notes:
     * How to do modulo in assembly
