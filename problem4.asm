@@ -1,8 +1,6 @@
 SECTION .rodata
 
 fmt: db "%d", 0x0a, 0
-i: dw 999
-j: dw 999
 
 
 SECTION .text
@@ -151,13 +149,17 @@ is_palindrome:
     ret
 
 
+; https://nasm.us/doc/nasmdoc3.html
+START_VAL equ 999
+END_VAL equ 99
+
 ; Function: main
 main:
     push RBP
     mov RBP, RSP
 
-    push 999 ; i = 999
-    push 999 ; j = 999
+    push START_VAL ; i = START_VAL
+    push START_VAL ; j = START_VAL
     push 0 ; largest palindrome
 
 .loop:
@@ -183,12 +185,12 @@ main:
     add RSP, 0x8 ; pop (i * j) from stack
 
     dec qword [RBP - 16] ; --j
-    cmp qword [RBP - 16], 100
+    cmp qword [RBP - 16], END_VAL
     jge .loop
 
     dec qword [RBP - 8] ; --i
-    cmp qword [RBP - 8], 100
-    mov qword [RBP - 16], 999 ; j = 999
+    cmp qword [RBP - 8], END_VAL
+    mov qword [RBP - 16], START_VAL ; j = START_VAL
     jge .loop
 
 .return:
