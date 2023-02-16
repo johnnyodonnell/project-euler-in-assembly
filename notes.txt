@@ -40,4 +40,6 @@ Notes:
         - https://stackoverflow.com/a/8022107/5832619
     * Compiling x64 assembly with libc
         - https://montcs.bloomu.edu/~bobmon/Code/Asm.and.C/Asm.Nasm/hello-printf-64.asm.html
+    * gdb is great, but edb is much more convenient since it has a GUI;
+        thus, I have switched to primarily debugging with edb
 
