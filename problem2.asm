@@ -37,7 +37,6 @@ inc_and_loop:
     mov RAX, 0x0
     call printf wrt ..plt
 
-
     mov RBX, 0
     mov RAX, 0x1
     int 0x80
