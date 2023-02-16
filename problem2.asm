@@ -19,8 +19,8 @@ main:
 is_even:
     test qword [RBP - 8], 0x1
     jnz inc_and_loop
-    mov EBX, [RBP - 8]
-    add [RBP - 24], EBX
+    mov RBX, [RBP - 8]
+    add [RBP - 24], RBX
 
 inc_and_loop:
     mov RBX, [RBP - 8] ; current fib
