@@ -27,7 +27,7 @@ insert_prime:
     mov RCX, 4
     mul RCX
 
-    mov RDX, primes
+    lea RDX, [rel primes]
     add RDX, RAX
 
     mov R12, [RBP + 24]
@@ -47,7 +47,7 @@ is_prime:
 
     push 1 ; default return value
 
-    mov R12, primes
+    lea R12, [rel primes]
 
 .loop:
     cmp dword [R12], 0x0
@@ -123,7 +123,7 @@ main:
     mul RCX
     mov RCX, RAX
 
-    mov RAX, primes
+    lea RAX, [rel primes]
     add RAX, RCX
 
     mov RSI, [RAX]
