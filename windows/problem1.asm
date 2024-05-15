@@ -11,49 +11,22 @@ extern _GetStdHandle@4
 extern _WriteFile@20
 global main
 
-; I don't think this is actually needed
-reverse_register:
-    push EBP
-    mov EBP, ESP
-
-    xor EAX, EAX ; zero out EAX
-    push 0x0 ; bits to shift
-
-.loop_start:
-    mov EDX, [EBP + 8] ; move register into ECX
-    mov CL, [EBP - 4]
-    shr EDX, CL
-    and EDX, 0xFF ; clear upper bits
-
-    shl EAX, 0x8
-    mov AL, DL
-
-    ; increase bits to shift
-    add DWORD [EBP - 4], 0x8
-
-    ; return if bits to shift is equal to 32
-    cmp DWORD [EBP - 4], 0x20
-    jl .loop_start
-
-    leave
-    ret
-
 print_digit:
     push EBP
     mov EBP, ESP
 
-    push 0x20 ; bits to shift
+    push 0x0 ; bits to shift
     xor EBX, EBX ; zero out EBX
 
 .loop_start:
-    sub DWORD [EBP - 4], 0x4
-
     mov EAX, [EBP + 12] ; move digit into EAX
     mov CL, [EBP - 4]
     shr EAX, CL
     and EAX, 0xF ; clear upper bits
 
-    cmp EAX, 0xA ; 
+    add DWORD [EBP - 4], 0x4
+
+    cmp EAX, 0xA ;
     jl .loop_continue
     add EAX, 0x7
 .loop_continue:
@@ -66,19 +39,14 @@ print_digit:
     jnz .is_shift_zero
 
     push EBX
-    call reverse_register
-    add ESP, 4 ; pop
-    push EAX
+    xor EBX, EBX ; zero out EBX again
 
 .is_shift_zero:
-    cmp DWORD [EBP - 4], 0
-    jg .loop_start
+    cmp DWORD [EBP - 4], 0x20 ; 32
+    jl .loop_start
 
 .loop_end:
     push EBX
-    call reverse_register
-    add ESP, 4 ; pop
-    push EAX
 
     push -11
     call _GetStdHandle@4
@@ -92,8 +60,8 @@ print_digit:
 
     push 0 ; null
     push EAX
-    push 0x8 ; print 4 bytes
-    lea EAX, [EBP - 8]
+    push 0x8 ; print N bytes
+    lea EAX, [EBP - 12]
     push EAX
     push EBX
     call _WriteFile@20
