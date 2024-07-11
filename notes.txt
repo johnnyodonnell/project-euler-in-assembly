@@ -45,3 +45,6 @@ Notes:
     * gdb is great, but edb is much more convenient since it has a GUI;
         thus, I have switched to primarily debugging with edb
 
+Other resources:
+    * https://github.com/johnnyodonnell/assembly-playground
+
